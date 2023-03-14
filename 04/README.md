@@ -70,14 +70,15 @@ On a une liste de noms de poissons chaque élément est un tuple avec
 3. Son sexe
 4. Mort ou vivant (bool)
 
-a. Filtrer la liste pour ne récupérer que les poissons mâles
-b. Afficher que les noms de poissons
-c. Établir une liste (set) de toutes les espèces présentes dans l'aquarium
-d. Créer une fonction `fish(name, group, genre, status)` qui affiche :
+On vous demande: 
+1. Filtrer la liste pour ne récupérer que les poissons mâles
+2. Afficher que les noms de poissons
+3. Établir une liste (set) de toutes les espèces présentes dans l'aquarium
+4. Créer une fonction `fish(name, group, genre, status)` qui affiche :
     `Poisson {name} de l'espèce {group} est {"vivant" if status else "mort"}`
-e. Executer la fonction pour chaque élément de la liste (vous utiliserez `*`)
-f. Comment savoir en une ligne si il y a des poissons mort dans l'aquarium
-g. Est-ce qu'il y a un "Scalaire" (nom de l'espèce) dans votre aquarium ?
+5. Executer la fonction pour chaque élément de la liste (vous utiliserez `*`)
+6. Comment savoir en une ligne si il y a des poissons mort dans l'aquarium
+7. Est-ce qu'il y a un "Scalaire" (nom de l'espèce) dans votre aquarium ?
 
 ```python
 import random
