@@ -99,3 +99,43 @@ for i in range(100):
 
 print(fish_list)
 ```
+
+### Solution chat.openai
+
+```python
+fish_list = [("Nemo", "Poisson-clown", "mâle", True),
+             ("Dory", "Chirurgien bleu", "femelle", True),
+             ("Marlin", "Poisson-clown", "mâle", False),
+             ("Bruce", "Grand requin blanc", "mâle", True),
+             ("Anchor", "Requin-marteau", "mâle", False),
+             ("Gill", "Poisson-chirurgien", "mâle", True),
+             ("Bloat", "Poisson-globe", "mâle", True),
+             ("Peach", "Etoile de mer", "femelle", True)]
+
+# Question 1: Filtrer la liste pour ne récupérer que les poissons mâles
+male_fish = filter(lambda fish: fish[2] == "mâle", fish_list)
+
+# Question 2: Afficher que les noms de poissons
+fish_names = map(lambda fish: fish[0], male_fish)
+print(list(fish_names))  # Output: ['Nemo', 'Marlin', 'Bruce', 'Anchor', 'Gill', 'Bloat']
+
+# Question 3: Établir une liste (set) de toutes les espèces présentes dans l'aquarium
+fish_species = set(map(lambda fish: fish[1], fish_list))
+print(fish_species)  # Output: {'Poisson-clown', 'Poisson-chirurgien', 'Chirurgien bleu', 'Etoile de mer', 'Requin-marteau', 'Grand requin blanc', 'Poisson-globe'}
+
+# Question 4: Créer une fonction fish(name, group, genre, status) qui affiche : Poisson {name} de l'espèce {group} est {"vivant" if status else "mort"}
+def fish(name, group, genre, status):
+    print(f"Poisson {name} de l'espèce {group} est {'vivant' if status else 'mort'}")
+
+# Question 5: Executer la fonction pour chaque élément de la liste (vous utiliserez *)
+for fish_info in fish_list:
+    fish(*fish_info)
+
+# Question 6: Comment savoir en une ligne si il y a des poissons mort dans l'aquarium
+any_dead_fish = any(map(lambda fish: not fish[3], fish_list))
+print(any_dead_fish)  # Output: True
+
+# Question 7: Est-ce qu'il y a un "Scalaire" (nom de l'espèce) dans votre aquarium ?
+is_scalaire_present = any(map(lambda fish: fish[1] == "Scalaire", fish_list))
+print(is_scalaire_present)  # Output: False
+```
